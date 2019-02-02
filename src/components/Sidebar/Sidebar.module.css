@@ -1,0 +1,44 @@
+.sidebar {
+  position: fixed;
+  padding: 20px auto;
+  height: 100%;
+  width: 300px;
+  margin-right: 300px;
+  left: 0;
+  background-color: #333;
+  overflow-y: auto;
+}
+
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  padding: 6px 20px;
+}
+
+.sidebarItem small {
+  font-size: 11px;
+  color: #bbb;
+}
+
+.sidebarItem:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+.sidebarTitle {
+  margin: 0;
+}
+
+.avatar {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  background-color: #777;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.userText {
+  display: flex;
+  flex-direction: column;
+}
