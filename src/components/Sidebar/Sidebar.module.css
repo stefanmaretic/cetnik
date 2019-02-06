@@ -1,10 +1,10 @@
 .sidebar {
   position: fixed;
   padding: 20px auto;
-  height: 100%;
   width: 300px;
+  height: 100%;
   left: 0;
-  background-color: #333;
+  background-color: var(--gray-1);
   overflow-y: auto;
 }
 
@@ -16,11 +16,11 @@
 
 .sidebarItem small {
   font-size: 11px;
-  color: #bbb;
+  color: var(--white-5);
 }
 
 .sidebarItem:hover {
-  background-color: #555;
+  background-color: var(--gray-2);
   cursor: pointer;
 }
 
@@ -32,8 +32,8 @@
   margin-right: 8px;
   width: 32px;
   height: 32px;
-  background-color: #777;
-  border-radius: 6px;
+  background-color: var(--gray-3);
+  border-radius: var(--avatar-radius);
   overflow: hidden;
 }
 

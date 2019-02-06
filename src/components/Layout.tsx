@@ -1,17 +1,16 @@
 import React from 'react'
 import Sidebar from './Sidebar'
+import styles from './App.module.css'
 
 interface Props {
   children: JSX.Element | JSX.Element[]
 }
 
-const MainLayout: React.SFC<Props> = ({ children }) => {
+export default function MainLayout(props: Props) {
   return (
     <>
       <Sidebar />
-      <div style={{ marginLeft: 300 }}>{children}</div>
+      <div className={styles.content}>{props.children}</div>
     </>
   )
 }
-
-export default MainLayout

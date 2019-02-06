@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ChatWindow from './Chat/'
-import Sidebar from './Sidebar/'
 import MainLayout from './Layout'
+import styles from './App.module.css'
 
-class App extends Component {
-  render() {
-    return (
-      <MainLayout>
+export default function App() {
+  return (
+    <MainLayout>
+      <div className={styles.flexContainer}>
         <ChatWindow />
-      </MainLayout>
-    )
-  }
+      </div>
+    </MainLayout>
+  )
 }
-
-export default App

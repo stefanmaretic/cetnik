@@ -1,0 +1,26 @@
+:root {
+  /* Fonts */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+
+  /* Colours */
+  --blue: #00b4fc;
+  --light-blue: #17f9ff;
+
+  --gray-1: #333;
+  --gray-2: #444;
+  --gray-3: #555;
+  --gray-4: #666;
+  --gray-5: #777;
+
+  --white-1: #fff;
+  --white-2: #eee;
+  --white-3: #ddd;
+  --white-4: #ccc;
+  --white-5: #bbb;
+
+  /* Radii */
+  --avatar-radius: 4px;
+  --main-radius: 1px;
+}

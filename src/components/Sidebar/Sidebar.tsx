@@ -4,7 +4,7 @@ import Contact from './Contact'
 
 import { users } from '../../mock-data'
 
-function Sidebar() {
+export default function Sidebar() {
   return (
     <aside className={styles.sidebar}>
       {users.map(user => (
@@ -13,5 +13,3 @@ function Sidebar() {
     </aside>
   )
 }
-
-export default Sidebar

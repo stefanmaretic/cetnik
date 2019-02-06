@@ -1,0 +1,7 @@
+.flexContainer {
+  display: flex;
+}
+
+.content {
+  margin-left: 300px;
+}

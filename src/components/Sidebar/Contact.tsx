@@ -11,20 +11,21 @@ interface Props {
   }
 }
 
-const Contact: React.SFC<Props> = ({
-  data: { imgSrc, username, firstName, lastName, desc },
-}) => (
-  <div className={styles.sidebarItem}>
-    <img
-      className={styles.avatar}
-      src={imgSrc}
-      alt={`${username} profile image`}
-    />
-    <div className={styles.userText}>
-      <p className={styles.sidebarTitle}>{username}</p>
-      <small>{desc}</small>
+export default function Contact(props: Props) {
+  const {
+    data: { imgSrc, username, firstName, lastName, desc },
+  } = props
+  return (
+    <div className={styles.sidebarItem}>
+      <img
+        className={styles.avatar}
+        src={imgSrc}
+        alt={`${username} profile image`}
+      />
+      <div className={styles.userText}>
+        <p className={styles.sidebarTitle}>{username}</p>
+        <small>{desc}</small>
+      </div>
     </div>
-  </div>
-)
-
-export default Contact
+  )
+}

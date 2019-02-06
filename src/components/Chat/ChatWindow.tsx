@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect, DOMElement } from 'react'
 import styles from './Chat.module.css'
-import MessageBar from './MessageBar'
+import ChatInput from './ChatInput'
 
-const ChatWindow: React.SFC = () => (
-  <div className={styles.chatWindow}>
-    {/*  */}
-    <MessageBar />
-  </div>
-)
+export default function ChatWindow() {
+  const [message, setMessage] = useState('')
+  const [messages, setMessages] = useState([''])
 
-export default ChatWindow
+  function addMessage(e: KeyboardEvent) {
+    if (message) {
+      if (e.keyCode === 13) {
+        setMessages(m => m.concat(message))
+        setMessage('')
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('keyup', addMessage)
+    return () => window.removeEventListener('keyup', addMessage)
+  }, [message])
+
+  return (
+    <div className={styles.chatWindow}>
+      {messages.map(message => (
+        <p>{message}</p>
+      ))}
+      <ChatInput value={message} onChange={setMessage} />
+    </div>
+  )
+}
