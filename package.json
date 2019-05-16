@@ -1,5 +1,5 @@
 {
-  "name": "cetnik",
+  "name": "chatnik",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -31,7 +31,7 @@
   ],
   "author": {
     "name": "Stefan Maretić",
-    "email": "smaretic@protonmail.com",
+    "email": "stefan.maretic@gmail.com",
     "url": "https://github.com/stefanmaretic"
   },
   "devDependencies": {
