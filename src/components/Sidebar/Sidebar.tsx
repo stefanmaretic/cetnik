@@ -2,9 +2,19 @@ import React from 'react'
 import styles from './Sidebar.module.css'
 import Contact from './Contact'
 
-import { users } from '../../mock-data'
+interface Props {
+  users: [
+    {
+      id: number
+      username: string
+      firstName: string
+      lastName: string
+      desc: string
+    }
+  ]
+}
 
-function Sidebar() {
+function Sidebar({ users }: Props) {
   return (
     <aside className={styles.sidebar}>
       {users.map(user => (

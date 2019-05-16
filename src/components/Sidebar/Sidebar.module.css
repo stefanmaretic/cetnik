@@ -1,9 +1,8 @@
 .sidebar {
   position: fixed;
-  padding: 20px auto;
+  padding: 20px 0;
   height: 100%;
   width: 300px;
-  margin-right: 300px;
   left: 0;
   background-color: #333;
   overflow-y: auto;

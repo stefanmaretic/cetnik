@@ -1,0 +1,51 @@
+.chatWindow {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: calc(100% - 300px);
+  height: 100vh;
+  margin-left: 300px;
+  background-color: var(--dark-lighter);
+}
+
+.chatWindow .textContainer {
+  padding: 1rem;
+}
+
+.chatWindow .textContainer p {
+  margin: 0;
+}
+
+.chatInputContainer {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chatInput {
+  flex-grow: 1;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  font-size: 14px;
+  background-color: var(--grey);
+  color: var(--white);
+}
+
+.chatInput::placeholder {
+  color: var(--grey-lightest);
+}
+
+.chatInputButton {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0 1rem;
+  border-radius: 0 3px 3px 0;
+  border: none;
+  color: var(--white);
+  background-color: var(--dark-lightest);
+  cursor: pointer;
+}
