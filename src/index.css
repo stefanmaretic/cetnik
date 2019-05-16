@@ -1,5 +1,17 @@
+@import-normalize;
+
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --dark: #333;
+  --dark-lighter: #555;
+  --dark-lightest: #777;
+  --grey: #999;
+  --grey-light: #aaa;
+  --grey-lightest: #ccc;
+  --white: #fff;
 }
 
 body {
