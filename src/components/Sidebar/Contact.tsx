@@ -1,5 +1,6 @@
 import React from 'react'
-import { useActiveUsers } from '../App'
+import { useActiveUsers } from '../active-users-context'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from './Sidebar.module.css'
 
@@ -16,9 +17,12 @@ interface Props {
 const Contact: React.FC<Props> = ({
   data: { imgSrc, username, firstName, lastName, desc },
 }) => {
-  const { addActiveUser } = useActiveUsers()
+  const { state, toggleUser } = useActiveUsers()
   function onClick() {
-    addActiveUser(username)
+    toggleUser(username)
+  }
+  function userActive(username: string): boolean {
+    return state.activeUsers.includes(username)
   }
   return (
     <div className={styles.sidebarItem} onClick={onClick}>
@@ -31,6 +35,11 @@ const Contact: React.FC<Props> = ({
         <p className={styles.sidebarTitle}>{username}</p>
         <small>{desc}</small>
       </div>
+      {userActive(username) && (
+        <div className={styles.arrow}>
+          <FontAwesomeIcon icon="caret-square-right" />
+        </div>
+      )}
     </div>
   )
 }

@@ -24,6 +24,11 @@
   cursor: pointer;
 }
 
+.sidebarItem .arrow {
+  padding-left: 0.25rem;
+  margin-left: auto;
+}
+
 .sidebarTitle {
   margin: 0;
 }

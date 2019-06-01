@@ -2,20 +2,55 @@
   display: flex;
   box-sizing: border-box;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: flex-end;
+  padding: 0 1rem;
   width: calc(100% - 300px);
   height: 100vh;
   margin-left: 300px;
   background-color: var(--dark-lighter);
+  overflow: auto;
+}
+
+.chatWindow .textHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: auto;
+  padding: 0.45rem 0;
+  background-color: var(--dark-lightest);
+  align-self: flex-start;
+}
+
+.chatWindow .textHeader span {
+  padding: 0 1rem;
+}
+
+.chatWindow .textHeader .closeButton {
+  cursor: pointer;
 }
 
 .chatWindow .textContainer {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 300px;
+  margin: 0.45rem 0.35rem;
+  padding-bottom: 1rem;
+  border: 1px solid var(--grey);
+  border-radius: 3px;
 }
 
 .chatWindow .textContainer p {
   margin: 0;
+}
+
+.chatWindow .textContainer :not(:first-child) {
+  padding: 0 1rem;
+}
+
+.chatWindow .textContainer .textHeader + p {
+  padding-top: 0.45rem;
 }
 
 .chatInputContainer {
@@ -42,6 +77,7 @@
 .chatInputButton {
   display: inline-block;
   margin-top: 1rem;
+  vertical-align: middle;
   padding: 0 1rem;
   border-radius: 0 3px 3px 0;
   border: none;

@@ -1,12 +1,23 @@
 import React, { useState } from 'react'
-
 import styles from './ChatWindow.module.css'
+import { useSocket } from '../socket-context'
 
-export default function ChatInput() {
+interface Props {
+  user: string
+}
+
+export default function ChatInput({ user }: Props) {
   const [value, update] = useState('')
-
+  const socket = useSocket()
+  function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    if (value) {
+      socket.emit('chat message', { user, value })
+    }
+    update('')
+  }
   return (
-    <div className={styles.chatInputContainer}>
+    <form onSubmit={onSubmit} className={styles.chatInputContainer}>
       <input
         className={styles.chatInput}
         type="text"
@@ -14,9 +25,9 @@ export default function ChatInput() {
         value={value}
         onChange={e => update(e.target.value)}
       />
-      <button type="button" className={styles.chatInputButton}>
+      <button type="submit" className={styles.chatInputButton}>
         Submit
       </button>
-    </div>
+    </form>
   )
 }
