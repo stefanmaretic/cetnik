@@ -15,7 +15,7 @@
     "@types/socket.io": "^2.1.2",
     "@types/socket.io-client": "^1.4.32",
     "express": "^4.17.0",
-    "immer": "^3.1.2",
+    "immer": "^8.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3",
